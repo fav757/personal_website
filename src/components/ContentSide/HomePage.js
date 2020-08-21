@@ -1,4 +1,5 @@
 import React from 'react';
+import sign from './sign.png';
 
 function HomePage() {
   return (
@@ -8,21 +9,7 @@ function HomePage() {
       <p>
         Welcome to my site. Here you can find out who I am and what I can do.
       </p>
-      <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
-      </p>
-      <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
-      </p>
-      <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
-      </p>
-      <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
-      </p>
-      <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
-      </p>
+      <img src={sign} alt='sign' />
     </div>
   );
 }

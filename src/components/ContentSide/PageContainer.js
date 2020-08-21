@@ -11,7 +11,7 @@ const PageContainerStyled = styled.div`
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.4rem;
   }
 
   &::-webkit-scrollbar-track {
