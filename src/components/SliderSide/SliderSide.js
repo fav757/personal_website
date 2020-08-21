@@ -13,6 +13,7 @@ const SliderSideStyled = styled.div`
 
   & img {
     height: 100%;
+    object-fit: cover;
   }
 `;
 
