@@ -1,9 +1,10 @@
 import React from 'react';
+import ContentSide from './components/ContentSide/ContentSide';
 
 function App() {
   return (
-    <div className="App">
-      test
+    <div>
+      <ContentSide />
     </div>
   );
 }
