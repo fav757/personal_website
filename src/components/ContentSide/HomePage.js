@@ -8,6 +8,21 @@ function HomePage() {
       <p>
         Welcome to my site. Here you can find out who I am and what I can do.
       </p>
+      <p>
+        Welcome to my site. Here you can find out who I am and what I can do.
+      </p>
+      <p>
+        Welcome to my site. Here you can find out who I am and what I can do.
+      </p>
+      <p>
+        Welcome to my site. Here you can find out who I am and what I can do.
+      </p>
+      <p>
+        Welcome to my site. Here you can find out who I am and what I can do.
+      </p>
+      <p>
+        Welcome to my site. Here you can find out who I am and what I can do.
+      </p>
     </div>
   );
 }

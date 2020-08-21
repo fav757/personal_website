@@ -7,6 +7,8 @@ const PageContainerStyled = styled.div`
   display: grid;
   align-items: center;
   overflow: auto;
+  scrollbar-color: rgba(0, 0, 0, 0.3) #2d2c3e;
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
