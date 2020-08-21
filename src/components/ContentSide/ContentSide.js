@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navigation from './Navigation';
+import Controlls from './Controlls';
 
 const ContentSideStyled = styled.div`
   display: flex;
@@ -13,10 +14,7 @@ function ContentSide() {
   return (
     <ContentSideStyled>
       <Navigation />
-      <div>
-        <i className='fas fa-lightbulb'></i>
-        <i className='fas fa-globe'></i>
-      </div>
+      <Controlls />
     </ContentSideStyled>
   );
 }
