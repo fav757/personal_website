@@ -4,7 +4,7 @@ function ContentSide() {
   return (
     <div>
       <nav>
-        <i>{'<-'}</i>
+        <i className='fas fa-arrow-left'></i>
         <h2>Home</h2>
       </nav>
       <div>
