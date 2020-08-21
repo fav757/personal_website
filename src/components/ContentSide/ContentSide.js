@@ -5,6 +5,8 @@ import HomePage from './HomePage';
 
 const ContentSideStyled = styled.div`
   padding: 2rem;
+  flex: 1;
+  height: 100%;
 `;
 
 function ContentSide() {

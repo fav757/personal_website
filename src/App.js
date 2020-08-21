@@ -1,13 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import ContentSide from './components/ContentSide/ContentSide';
 import SliderSide from './components/SliderSide/SliderSide';
 
+const AppStyled = styled.div`
+  display: flex;
+  height: 100%;
+`;
+
 function App() {
   return (
-    <div>
+    <AppStyled>
       <ContentSide />
       <SliderSide />
-    </div>
+    </AppStyled>
   );
 }
 
