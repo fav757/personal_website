@@ -8,7 +8,8 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
+  border-bottom: ${(props) =>
+    props.theme.mode === 'dark' ? '1px solid white' : '1px solid black'};
 `;
 
 function Header() {
