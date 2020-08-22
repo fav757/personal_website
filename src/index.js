@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
 import App from './App';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   *, ::before, ::after {
@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     font-family: 'Montserrat', 'Roboto', sans-serif;
     font-size: 18px;
-    color: white;
+    color: ${(props) => (props.theme.mode === 'light' ? 'black' : 'white')};
     height: 100%;
     width: 100%;
   }
@@ -39,9 +39,9 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <React.Fragment>
+  <ThemeProvider theme={{ mode: 'light' }}>
     <GlobalStyles />
     <App />
-  </React.Fragment>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
