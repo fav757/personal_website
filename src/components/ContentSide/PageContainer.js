@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HomePage from './HomePage';
+import HomePage from '../Pages/HomePage';
 
 const PageContainerStyled = styled.div`
   height: calc(100% - 4rem);
