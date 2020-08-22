@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { GlobalState } from '../../GlobalState';
+import { changeTheme } from '../../rootActions';
 
 const ControllsStyled = styled.div`
   display: flex;
@@ -11,9 +13,12 @@ const ControllsStyled = styled.div`
 `;
 
 function Controlls() {
+  const { dispatch } = useContext(GlobalState);
+  const setTheme = () => dispatch(changeTheme);
+
   return (
     <ControllsStyled>
-      <i className='fas fa-lightbulb'></i>
+      <i onClick={setTheme} className='fas fa-lightbulb'></i>
       <i className='fas fa-globe'></i>
     </ControllsStyled>
   );
