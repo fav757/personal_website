@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import App from './App';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { GlobalContext } from './GlobalState';
 
 const GlobalStyles = createGlobalStyle`
   *, ::before, ::after {
@@ -39,9 +40,11 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <ThemeProvider theme={{ mode: 'light' }}>
-    <GlobalStyles />
-    <App />
-  </ThemeProvider>,
+  <GlobalContext>
+    <ThemeProvider theme={{ mode: 'dark' }}>
+      <GlobalStyles />
+      <App />
+    </ThemeProvider>
+  </GlobalContext>,
   document.getElementById('root')
 );
