@@ -5,15 +5,17 @@ import routes from '../../routes';
 const NavModalMenuStyled = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 1.1rem 0 0 0;
+  margin: 1.1rem 0 0 -0.89rem;
   position: absolute;
-  background: #37354d;
+  color: ${(props) => (props.theme.mode === 'dark' ? 'black' : 'white')};
+  background: ${(props) => (props.theme.mode === 'dark' ? 'white' : '#37354d')};
 
   & > li {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
 
     &:not(:last-child) {
-      border-bottom: 1px solid white
+      border-bottom: ${(props) =>
+        '1px solid ' + (props.theme.mode === 'dark' ? '#37354d' : 'white')};
     }
   }
 `;
