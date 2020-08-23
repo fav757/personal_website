@@ -33,7 +33,7 @@ function PageContainer() {
   return (
     <PageContainerStyled>
       <Switch>
-      <Route path='/home'>
+        <Route path='/home'>
           <HomePage />
         </Route>
         <Route path='/about'>
