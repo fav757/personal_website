@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import HomePage from '../Pages/HomePage';
 import AboutPage from '../Pages/AboutPage';
+import SkillsPage from '../Pages/SkillsPage';
+import ContactsPage from '../Pages/ContactsPage';
+import Page404 from '../Pages/Page404';
+import { Switch, Route } from 'react-router-dom';
 
 const PageContainerStyled = styled.div`
   height: calc(100% - 4rem);
@@ -27,7 +32,26 @@ const PageContainerStyled = styled.div`
 function PageContainer() {
   return (
     <PageContainerStyled>
-      <AboutPage />
+      <Switch>
+      <Route path='/home'>
+          <HomePage />
+        </Route>
+        <Route path='/about'>
+          <AboutPage />
+        </Route>
+        <Route path='/skills'>
+          <SkillsPage />
+        </Route>
+        <Route path='/contacts'>
+          <ContactsPage />
+        </Route>
+        <Route exact path='/'>
+          <HomePage />
+        </Route>
+        <Route>
+          <Page404 />
+        </Route>
+      </Switch>
     </PageContainerStyled>
   );
 }
