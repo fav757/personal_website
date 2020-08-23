@@ -20,7 +20,7 @@ function Navigation() {
       <i className='fas fa-arrow-left'></i>
       <div>
         <h2 onClick={handleClick}>Home</h2>
-        {showMenu && <NavModalMenu />}
+        {showMenu && <NavModalMenu setShowMenu={setShowMenu} />}
       </div>
     </NavigationStyled>
   );

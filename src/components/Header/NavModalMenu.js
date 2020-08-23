@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import routes from '../../routes';
 import { Link } from 'react-router-dom';
+
+const routes = ['home', 'about', 'skills', 'contacts'];
 
 const NavModalMenuStyled = styled.ul`
   list-style: none;
@@ -21,12 +22,14 @@ const NavModalMenuStyled = styled.ul`
   }
 `;
 
-function NavModalMenu() {
+function NavModalMenu(props) {
+  const handleClick = () => props.setShowMenu(false);
+
   return (
     <NavModalMenuStyled>
       {routes.map((route) => (
         <li key={route}>
-          <Link to={'/' + route}>{route}</Link>
+          <Link onClick={handleClick} to={'/' + route}>{route}</Link>
         </li>
       ))}
     </NavModalMenuStyled>
