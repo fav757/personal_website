@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import sign from './sign.png';
+import basicPageStyle from './PageBasicStyle';
 
-const HomePageStyled = styled.div`
+const HomePageStyled = styled(basicPageStyle)`
   & > img[alt='sign'] {
     filter: ${(props) =>
       props.theme.mode === 'dark' ? 'invert(1)' : 'invert(0)'};

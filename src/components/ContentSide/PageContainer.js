@@ -8,8 +8,6 @@ import Page404 from '../Pages/Page404';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
-const transitionName = 'pageContainerAnimation';
-
 const PageContainerStyled = styled.div`
   height: calc(100% - 4rem);
   display: grid;
@@ -17,7 +15,6 @@ const PageContainerStyled = styled.div`
   overflow: auto;
   scrollbar-color: rgba(0, 0, 0, 0.3) #2d2c3e;
   scrollbar-width: thin;
-  transition: 0.5s;
 
   &::-webkit-scrollbar {
     width: 0.4rem;
@@ -31,33 +28,20 @@ const PageContainerStyled = styled.div`
     background-color: #2d2c3e;
     outline: 1px solid slategrey;
   }
-
-  /* React transition animations */
-  &.${transitionName}-enter {
-    transform: scale(0);
-  }
-
-  &.${transitionName}-enter-acitve {
-    transform: scale(1);
-  }
-
-  &.${transitionName}-exit-active {
-    transform: scale(0);
-  }
 `;
 
 function PageContainer() {
   const location = useLocation();
 
   return (
-    <SwitchTransition>
-      <CSSTransition
-        key={location.pathname}
-        classNames={transitionName}
-        timeout={500}
-      >
-        <PageContainerStyled>
-          <Switch>
+    <PageContainerStyled>
+      <SwitchTransition>
+        <CSSTransition
+          key={location.pathname}
+          classNames='pageContainerAnimation'
+          timeout={1000}
+        >
+          <Switch location={location}>
             <Route path='/home'>
               <HomePage />
             </Route>
@@ -77,9 +61,9 @@ function PageContainer() {
               <Page404 />
             </Route>
           </Switch>
-        </PageContainerStyled>
-      </CSSTransition>
-    </SwitchTransition>
+        </CSSTransition>
+      </SwitchTransition>
+    </PageContainerStyled>
   );
 }
 
