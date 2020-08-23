@@ -5,7 +5,10 @@ import AboutPage from '../Pages/AboutPage';
 import SkillsPage from '../Pages/SkillsPage';
 import ContactsPage from '../Pages/ContactsPage';
 import Page404 from '../Pages/Page404';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
+
+const transitionName = 'pageContainerAnimation';
 
 const PageContainerStyled = styled.div`
   height: calc(100% - 4rem);
@@ -14,6 +17,7 @@ const PageContainerStyled = styled.div`
   overflow: auto;
   scrollbar-color: rgba(0, 0, 0, 0.3) #2d2c3e;
   scrollbar-width: thin;
+  transition: 0.5s;
 
   &::-webkit-scrollbar {
     width: 0.4rem;
@@ -27,32 +31,55 @@ const PageContainerStyled = styled.div`
     background-color: #2d2c3e;
     outline: 1px solid slategrey;
   }
+
+  /* React transition animations */
+  &.${transitionName}-enter {
+    transform: scale(0);
+  }
+
+  &.${transitionName}-enter-acitve {
+    transform: scale(1);
+  }
+
+  &.${transitionName}-exit-active {
+    transform: scale(0);
+  }
 `;
 
 function PageContainer() {
+  const location = useLocation();
+
   return (
-    <PageContainerStyled>
-      <Switch>
-        <Route path='/home'>
-          <HomePage />
-        </Route>
-        <Route path='/about'>
-          <AboutPage />
-        </Route>
-        <Route path='/skills'>
-          <SkillsPage />
-        </Route>
-        <Route path='/contacts'>
-          <ContactsPage />
-        </Route>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
-        <Route>
-          <Page404 />
-        </Route>
-      </Switch>
-    </PageContainerStyled>
+    <SwitchTransition>
+      <CSSTransition
+        key={location.pathname}
+        classNames={transitionName}
+        timeout={500}
+      >
+        <PageContainerStyled>
+          <Switch>
+            <Route path='/home'>
+              <HomePage />
+            </Route>
+            <Route path='/about'>
+              <AboutPage />
+            </Route>
+            <Route path='/skills'>
+              <SkillsPage />
+            </Route>
+            <Route path='/contacts'>
+              <ContactsPage />
+            </Route>
+            <Route exact path='/'>
+              <HomePage />
+            </Route>
+            <Route>
+              <Page404 />
+            </Route>
+          </Switch>
+        </PageContainerStyled>
+      </CSSTransition>
+    </SwitchTransition>
   );
 }
 
