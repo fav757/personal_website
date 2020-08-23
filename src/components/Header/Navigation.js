@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, Switch, Route } from 'react-router-dom';
 
 const routes = ['home', 'about', 'skills', 'contacts'];
 
@@ -10,6 +10,19 @@ const NavigationStyled = styled.nav`
 
   & h2 {
     margin: 0 0 0 1rem;
+    text-transform: capitalize;
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &:hover ul {
@@ -28,6 +41,7 @@ const NavigationStyled = styled.nav`
 
     & > li {
       padding: 0.5rem 1.2rem;
+      text-align: center;
 
       &:not(:last-child) {
         border-bottom: ${(props) =>
@@ -37,33 +51,27 @@ const NavigationStyled = styled.nav`
   }
 `;
 
-const pageHistory = [];
-
 function Navigation() {
-  const [showMenu, setShowMenu] = useState(false);
   const history = useHistory();
-
-  useEffect(() => {
-    pageHistory.push(history.location.pathname);
-  }, [history.location.pathname]);
-
-  const handleClick = () => setShowMenu(!showMenu);
-  const backHistory = () => {
-    if (pageHistory[pageHistory.length - 2]) {
-      pageHistory.pop();
-      history.goBack();
-    } else {
-      if (window.confirm('Do you want to leave the site?')) {
-        history.goBack();
-      }
-    }
-  };
+  const handleClick = () => history.goBack();
 
   return (
     <NavigationStyled>
-      <i onClick={backHistory} className='fas fa-arrow-left'></i>
+      <i onClick={handleClick} className='fas fa-arrow-left'></i>
       <div>
-        <h2 onClick={handleClick}>Home</h2>
+        <h2>
+          <Switch>
+            {routes.map((route) => (
+              <Route key={route} path={'/' + route}>
+                {route}
+              </Route>
+            ))}
+            <Route exact path='/'>
+              Home
+            </Route>
+            <Route>Error</Route>
+          </Switch>
+        </h2>
         <ul>
           {routes.map((route) => (
             <li key={route}>
