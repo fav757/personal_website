@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import routes from '../../routes';
+import { Link } from 'react-router-dom';
 
 const NavModalMenuStyled = styled.ul`
   list-style: none;
@@ -24,7 +25,9 @@ function NavModalMenu() {
   return (
     <NavModalMenuStyled>
       {routes.map((route) => (
-        <li key={route}>{route}</li>
+        <li key={route}>
+          <Link to={'/' + route}>{route}</Link>
+        </li>
       ))}
     </NavModalMenuStyled>
   );

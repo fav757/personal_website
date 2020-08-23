@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import App from './App';
 import { GlobalContext } from './GlobalState';
-
+import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <GlobalContext>
-    <App />
+    <HashRouter hashType='noslash'>
+      <App />
+    </HashRouter>
   </GlobalContext>,
   document.getElementById('root')
 );
