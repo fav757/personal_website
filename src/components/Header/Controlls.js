@@ -13,7 +13,7 @@ const ControllsStyled = styled.div`
 
   & > i:hover {
     transform: scale(1.2);
-    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec')};
+    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff')};
   }
 `;
 

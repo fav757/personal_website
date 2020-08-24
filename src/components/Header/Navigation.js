@@ -10,7 +10,7 @@ const NavigationStyled = styled.nav`
 
   & > i:hover {
     transform: scale(1.2);
-    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec')};
+    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff')};
   }
 
   & h2 {
@@ -19,7 +19,7 @@ const NavigationStyled = styled.nav`
 
     &:hover {
       color: ${(props) =>
-        props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec'};
+        props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff'};
     }
   }
 
