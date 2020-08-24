@@ -7,6 +7,7 @@ import slideContacts from './slide_contacts.jpg';
 import slide404 from './slide_404.jpg';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Preloader from './SliderPreloader';
 
 const SliderSideStyled = styled.div`
   overflow: hidden;
@@ -17,28 +18,6 @@ const SliderSideStyled = styled.div`
     display: flex;
     position: relative;
     height: 100%;
-  }
-
-  & img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    /* React transiton animation */
-    &.sliderAnimation-enter {
-      transform: translateX(-100%);
-    }
-
-    &.sliderAnimation-enter-active {
-      transform: translateX(0);
-      transition: 2s 0.5s linear;
-    }
-
-    &.sliderAnimation-exit-active {
-      transform: translateX(100%);
-      transition: 2s 0.5s linear;
-    }
   }
 `;
 
@@ -56,22 +35,22 @@ function SliderSide() {
           >
             <Switch location={location}>
               <Route path='/home'>
-                <img src={slideHome} alt='home' />
+                <Preloader src={slideHome} alt={'home'} />
               </Route>
               <Route path='/about'>
-                <img src={slideAbout} alt='about' />
+                <Preloader src={slideAbout} alt='about' />
               </Route>
               <Route path='/skills'>
-                <img src={slideSkills} alt='skills' />
+                <Preloader src={slideSkills} alt='skills' />
               </Route>
               <Route path='/contacts'>
-                <img src={slideContacts} alt='contacts' />
+                <Preloader src={slideContacts} alt='contacts' />
               </Route>
               <Route exact path='/'>
-                <img src={slideHome} alt='home' />
+                <Preloader src={slideHome} alt='home' />
               </Route>
               <Route>
-                <img src={slide404} alt='page 404' />
+                <Preloader src={slide404} alt='page 404' />
               </Route>
             </Switch>
           </CSSTransition>
