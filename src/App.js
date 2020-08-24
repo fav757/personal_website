@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
     height: 576px;
     background: ${(props) =>
       props.theme.mode === 'dark'
-        ? 'linear-gradient(90deg, #373648 0%, #383556 100%)'
+        ? 'linear-gradient(90deg, #373648 0%, #3b3667 100%)'
         : 'white'} ;
     box-shadow: ${(props) =>
       props.theme.mode === 'dark'

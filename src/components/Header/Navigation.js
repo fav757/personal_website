@@ -35,13 +35,17 @@ const NavigationStyled = styled.nav`
     padding: 0;
     margin: 0 0 0 -0.89rem;
     position: absolute;
-    color: ${(props) => (props.theme.mode === 'dark' ? 'black' : 'white')};
+    color: black;
     background: ${(props) =>
-      props.theme.mode === 'dark' ? 'white' : '#37354d'};
+      props.theme.mode === 'dark' ? 'white' : '#f0f0f0;'};
 
     & > li {
       padding: 0.5rem 1.2rem;
       text-align: center;
+      &:hover {
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#f1f1f1' : '#dddddd;'};
+    }
 
       &:not(:last-child) {
         border-bottom: ${(props) =>
