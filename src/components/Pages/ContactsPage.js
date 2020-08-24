@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import basicPageStyle from './PageBasicStyle';
+import ContactForm from './ContactForm';
 
 const ContactsPageStyled = styled(basicPageStyle)``;
 
@@ -75,6 +76,9 @@ function ContactsPage() {
     <ContactsPageStyled>
       <h2>Cocial networks</h2>
       <SocialsLinks />
+      <h2>Contact me</h2>
+      <p>You can also contact me using the contact form.</p>
+      <ContactForm />
     </ContactsPageStyled>
   );
 }
