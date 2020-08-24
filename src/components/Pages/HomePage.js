@@ -14,9 +14,9 @@ function HomePage() {
   return (
     <HomePageStyled>
       <h1>Alexandr Sapalsky</h1>
-      <h2>Junior Front-end developer</h2>
+      <h2>Trainee Front-end developer</h2>
       <p>
-        Welcome to my site. Here you can find out who I am and what I can do.
+        Welcome to my site. Here you can find information about me.
       </p>
       <img src={sign} alt='sign' />
     </HomePageStyled>

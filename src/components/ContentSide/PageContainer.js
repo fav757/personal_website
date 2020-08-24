@@ -9,7 +9,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const PageContainerStyled = styled.div`
-  height: calc(100% - 4rem);
+  height: calc(100% - 3rem);
   display: grid;
   align-items: center;
   overflow: auto;
