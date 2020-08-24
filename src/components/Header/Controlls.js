@@ -10,11 +10,16 @@ const ControllsStyled = styled.div`
   & > i:first-child {
     margin-right: 1rem;
   }
+
+  & > i:hover {
+    transform: scale(1.2);
+    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec')};
+  }
 `;
 
 function Controlls() {
   const { state, dispatch } = useContext(GlobalState);
-  
+
   const setTheme = () => dispatch(changeTheme);
   const setLang = () => {
     dispatch(changeLanguage);

@@ -8,9 +8,19 @@ const NavigationStyled = styled.nav`
   display: flex;
   align-items: center;
 
+  & > i:hover {
+    transform: scale(1.2);
+    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec')};
+  }
+
   & h2 {
     margin: 0 0 0 1rem;
     text-transform: capitalize;
+
+    &:hover {
+      color: ${(props) =>
+        props.theme.mode === 'dark' ? '#bfb9fb' : '#a6e1ec'};
+    }
   }
 
   & a {
@@ -43,9 +53,9 @@ const NavigationStyled = styled.nav`
       padding: 0.5rem 1.2rem;
       text-align: center;
       &:hover {
-      background: ${(props) =>
-        props.theme.mode === 'dark' ? '#f1f1f1' : '#dddddd;'};
-    }
+        background: ${(props) =>
+          props.theme.mode === 'dark' ? '#f1f1f1' : '#dddddd;'};
+      }
 
       &:not(:last-child) {
         border-bottom: ${(props) =>
