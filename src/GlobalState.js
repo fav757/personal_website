@@ -3,6 +3,7 @@ import rootReducer from './rootReducer';
 
 const initialState = {
   theme: 'dark',
+  language: 'en',
 };
 
 export const GlobalState = createContext(initialState);
