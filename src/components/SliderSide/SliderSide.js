@@ -5,7 +5,8 @@ import slideAbout from './slide_about.jpg';
 import slideSkills from './slide_skills.jpg';
 import slideContacts from './slide_contacts.jpg';
 import slide404 from './slide_404.jpg';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const SliderSideStyled = styled.div`
   overflow: hidden;
@@ -23,30 +24,40 @@ const SliderSideStyled = styled.div`
 `;
 
 function SliderSide() {
+  const location = useLocation();
+
   return (
     <SliderSideStyled>
-      <div>
-        <Switch>
-          <Route path='/home'>
-            <img src={slideHome} alt='home' />
-          </Route>
-          <Route path='/about'>
-            <img src={slideAbout} alt='about' />
-          </Route>
-          <Route path='/skills'>
-            <img src={slideSkills} alt='skills' />
-          </Route>
-          <Route path='/contacts'>
-            <img src={slideContacts} alt='contacts' />
-          </Route>
-          <Route exact path='/'>
-            <img src={slideHome} alt='home' />
-          </Route>
-          <Route>
-            <img src={slide404} alt='page 404' />
-          </Route>
-        </Switch>
-      </div>
+      <SwitchTransition>
+        <CSSTransition
+          key={location.pathname}
+          timeout={1000}
+          classNames='sliderAnimation'
+        >
+          <div>
+            <Switch>
+              <Route path='/home'>
+                <img src={slideHome} alt='home' />
+              </Route>
+              <Route path='/about'>
+                <img src={slideAbout} alt='about' />
+              </Route>
+              <Route path='/skills'>
+                <img src={slideSkills} alt='skills' />
+              </Route>
+              <Route path='/contacts'>
+                <img src={slideContacts} alt='contacts' />
+              </Route>
+              <Route exact path='/'>
+                <img src={slideHome} alt='home' />
+              </Route>
+              <Route>
+                <img src={slide404} alt='page 404' />
+              </Route>
+            </Switch>
+          </div>
+        </CSSTransition>
+      </SwitchTransition>
     </SliderSideStyled>
   );
 }
