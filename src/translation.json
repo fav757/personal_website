@@ -1,0 +1,15 @@
+{
+  "en": {
+    "translation": {
+      "homePage header": "Alexandr Sapalsky",
+      "homePage subheader": "Trainee Front-end developer"
+    }
+  },
+
+  "ru": {
+    "translation": {
+      "homePage header": "Александр Сапальский",
+      "homePage subheader": "Трэйни Фронт-энд разработчик"
+    }
+  }
+}
