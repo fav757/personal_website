@@ -10,6 +10,7 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 const PageContainerStyled = styled.div`
   height: calc(100% - 3rem);
+  padding: 0 2rem;
   display: grid;
   align-items: center;
   overflow: auto;

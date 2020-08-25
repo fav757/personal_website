@@ -7,7 +7,7 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 0 2rem 1rem 2rem;
   border-bottom: ${(props) =>
     props.theme.mode === 'dark' ? '1px solid white' : '1px solid black'};
 `;
