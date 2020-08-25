@@ -2,14 +2,34 @@
   "en": {
     "translation": {
       "homePage header": "Alexandr Sapalsky",
-      "homePage subheader": "Trainee Front-end developer"
+      "homePage subheader": "Trainee Front-end developer",
+
+      "skillsPage tip": "Click on the progress bar for details",
+      "skillsPage basics": "Basics",
+      "skillsPage frameworks": "Frameworks and libraries",
+      "skillsPage tools": "Tools",
+      "skillsPage languages": "Languages",
+      "skillsPage russian": "Russian",
+      "skillsPage ukrainian": "Ukrainian",
+      "skillsPage english": "English",
+      "skillsPage native": "Native speaker"
     }
   },
 
   "ru": {
     "translation": {
       "homePage header": "Александр Сапальский",
-      "homePage subheader": "Трэйни Фронт-энд разработчик"
+      "homePage subheader": "Трэйни Фронт-энд разработчик",
+
+      "skillsPage tip": "Нажмите на прогресс бар, чтобы увидеть подрбности",
+      "skillsPage basics": "Основное",
+      "skillsPage frameworks": "Фреймворки и библиотеки",
+      "skillsPage tools": "Инструменты",
+      "skillsPage languages": "Языки",
+      "skillsPage russian": "Русский",
+      "skillsPage ukrainian": "Украинский",
+      "skillsPage english": "Английский",
+      "skillsPage native": "Родной язык"
     }
   }
 }

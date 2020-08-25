@@ -2,14 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import basicPageStyle from './PageBasicStyle';
 import SkillRow from '../SkillRow/SkillRow';
+import { useTranslation } from 'react-i18next';
 
 const SkillsPageStyled = styled(basicPageStyle)``;
 
 function SkilsPage() {
+  const { t } = useTranslation();
+
   return (
     <SkillsPageStyled>
-      <p>Click on the progress bar for details</p>
-      <h2>Basics</h2>
+      <p>{t('skillsPage tip')}</p>
+      <h2>{t('skillsPage basics')}</h2>
       <SkillRow
         title='HTML + CSS'
         skillLevel={75}
@@ -29,7 +32,7 @@ function SkilsPage() {
           'AJAX',
         ]}
       />
-      <h2>Frameworks and libraries</h2>
+      <h2>{t('skillsPage frameworks')}</h2>
       <SkillRow
         title='React'
         skillLevel={75}
@@ -44,7 +47,7 @@ function SkilsPage() {
           'Styled components',
         ]}
       />
-      <h2>Tools</h2>
+      <h2>{t('skillsPage tools')}</h2>
       <SkillRow
         title='NodeJs'
         skillLevel={55}
@@ -60,21 +63,21 @@ function SkilsPage() {
         skillLevel={70}
         skillsList={['Photo correction', 'Design']}
       />
-      <h2>Languages</h2>
+      <h2>{t('skillsPage languages')}</h2>
       <SkillRow
-        title='English'
+        title={t('skillsPage english')}
         skillLevel={75}
         skillsList={['B2']}
       />
       <SkillRow
-        title='Russian'
+        title={t('skillsPage russian')}
         skillLevel={100}
-        skillsList={['Native speaker']}
+        skillsList={[t('skillsPage native')]}
       />
       <SkillRow
-        title='Ukrainian'
+        title={t('skillsPage ukrainian')}
         skillLevel={100}
-        skillsList={['Native speaker']}
+        skillsList={[t('skillsPage native')]}
       />
     </SkillsPageStyled>
   );
