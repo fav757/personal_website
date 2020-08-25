@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import basicPageStyle from './PageBasicStyle';
-import ContactForm from './ContactForm';
+import ContactForm from '../ContactForm/ContactForm';
 
 const ContactsPageStyled = styled(basicPageStyle)``;
 
