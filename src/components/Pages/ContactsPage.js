@@ -31,7 +31,6 @@ const SocialsLink = styled.a`
   }
 
   & > i {
-    cursor: pointer;
     font-size: 1.4rem;
     margin-right: 1rem;
   }

@@ -8,6 +8,10 @@ const NavigationStyled = styled.nav`
   display: flex;
   align-items: center;
 
+  & > i {
+    cursor: pointer;
+  }
+
   & > i:hover {
     transform: scale(1.2);
     color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff')};

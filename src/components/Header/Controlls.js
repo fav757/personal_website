@@ -7,6 +7,10 @@ const ControllsStyled = styled.div`
   display: flex;
   align-items: center;
 
+  & > i {
+    cursor: pointer;
+  }
+
   & > i:first-child {
     margin-right: 1rem;
   }
