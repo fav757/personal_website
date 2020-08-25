@@ -11,12 +11,11 @@ function AboutPage() {
 
   return (
     <AboutPageStyled>
-      <h2>Summary</h2>
+      <h2>Main</h2>
       <p>
         I am a {age} year beginner web developer from Kharkiv who is interested
-        in the Internet and technologies that make the web dynamic and
-        convenient and right now I want to start my Front-end career, work on
-        real projects, improving my skills in practice.
+        in web technologies and right now I want to start my Front-end career,
+        work on real projects, improving my skills in practice.
       </p>
 
       <h2>Education</h2>

@@ -20,7 +20,9 @@ function SkilsPage() {
         skillLevel={80}
         skillsList={[
           'Prototype',
-          'Promise / Async',
+          'Promise',
+          'Async',
+          'Hoisting',
           'Context',
           'Scope',
           'DOM',
@@ -35,8 +37,8 @@ function SkilsPage() {
           'State',
           'Hooks',
           'Life-cycle',
-          'React Router',
           'Redux',
+          'React Router',
           'React Transition group',
           'CSS modules',
           'Styled components',
