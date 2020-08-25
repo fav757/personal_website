@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { GlobalState } from '../../GlobalState';
 import { changeTheme, changeLanguage } from '../../rootActions';
@@ -26,11 +26,12 @@ function Controlls() {
   const { state, dispatch } = useContext(GlobalState);
 
   const setTheme = () => dispatch(changeTheme);
-  const setLang = () => {
-    dispatch(changeLanguage);
+  const setLang = () => dispatch(changeLanguage);
+
+  useEffect(() => {
     document.documentElement.lang = state.language;
     i18n.changeLanguage(state.language);
-  };
+  });
 
   return (
     <ControllsStyled>
