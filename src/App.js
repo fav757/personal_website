@@ -36,7 +36,8 @@ const GlobalStyles = createGlobalStyle`
 
   #root {
     display: flex;
-    width: 992px;
+    max-width: 992px;
+    width: 100%;
     height: 576px;
     background: ${(props) =>
       props.theme.mode === 'dark'
@@ -46,6 +47,29 @@ const GlobalStyles = createGlobalStyle`
       props.theme.mode === 'dark'
         ? '0px 0px 7px black'
         : '0px 0px 7px lightgray'};
+  }
+
+  @media only screen and (max-width: 992px) {
+    body {
+      padding: 1rem;
+      align-items: stretch;
+    }
+
+    #root {
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    body {
+      display: block;
+      padding: 0;
+    }
+
+    #root {
+      flex-direction: column-reverse;
+      min-height: 100vh;
+    }
   }
 `;
 

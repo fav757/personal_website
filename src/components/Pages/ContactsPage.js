@@ -14,6 +14,10 @@ const SocialsLinksStyled = styled.div`
     display: flex;
     flex-flow: column nowrap;
   }
+
+  @media only screen and (max-width: 576px) {
+    flex-direction: column;
+  }
 `;
 
 const SocialsLink = styled.a`

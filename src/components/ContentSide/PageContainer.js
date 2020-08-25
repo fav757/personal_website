@@ -29,6 +29,11 @@ const PageContainerStyled = styled.div`
     background-color: #2d2c3e;
     outline: 1px solid slategrey;
   }
+
+  @media only screen and (max-width: 576px) {
+    height: auto;
+    overflow: initial;
+  }
 `;
 
 function PageContainer() {

@@ -19,6 +19,10 @@ const SliderSideStyled = styled.div`
     position: relative;
     height: 100%;
   }
+
+  @media screen and (max-width: 576px) {
+    height: 50vh;
+  }
 `;
 
 function SliderSide() {

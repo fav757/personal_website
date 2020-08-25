@@ -7,6 +7,10 @@ const ContentSideStyled = styled.div`
   padding: 1rem 0;
   flex: 1;
   height: 100%;
+
+  @media only screen and (max-width: 576px) {
+    height: auto;
+  }
 `;
 
 function ContentSide() {
