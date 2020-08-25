@@ -5,7 +5,8 @@ const FormStyled = styled.form`
   & button {
     padding: 0.5rem 4rem;
     color: inherit;
-    background: ${props => props.theme.mode === 'dark' ? '#12111f' : '#9e9e9e'};
+    background: ${(props) =>
+      props.theme.mode === 'dark' ? '#12111f' : '#9e9e9e'};
     border: none;
     border-radius: 1rem;
   }
@@ -14,7 +15,7 @@ const FormStyled = styled.form`
     margin-right: 1rem;
   }
 
-  & > div.buttonContainer, & > div.responseContainer {
+  & > div {
     text-align: center;
   }
 
@@ -86,11 +87,11 @@ function ContactForm() {
         required
       />
       {responseStatus === 'waiting' ? (
-        <div className='buttonContainer'>
+        <div>
           <button name='sendButton'>Send</button>
         </div>
       ) : (
-        <div className='responseContainer'>
+        <div>
           <i className={responseStatus ? 'fas fa-check' : 'fas fa-times'}></i>
           <span>
             {responseStatus

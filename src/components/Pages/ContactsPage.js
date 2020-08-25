@@ -16,7 +16,7 @@ const SocialsLinksStyled = styled.div`
   }
 
   & a,
-  & div.not-link {
+  & > div > div {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -58,11 +58,11 @@ function SocialsLinks() {
       </div>
 
       <div>
-        <div className='not-link'>
+        <div>
           <i className='fas fa-envelope'></i>
           <span>fav755@gmail.com</span>
         </div>
-        <div className='not-link'>
+        <div>
           <i className='fas fa-phone-square'></i>
           <span>+380 975 290 153</span>
         </div>
