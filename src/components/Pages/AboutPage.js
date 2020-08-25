@@ -32,10 +32,15 @@ function AboutPage() {
         I did my own study of Front-end basics using resources like MDN and
         learn.javascript.ru. Also was trained in Epam courses in the "Front-end
         / JavaScript" direction. Made several little projects like notes
-        aplication or spends manager. My code is available on {' '}
-        <a href='https://github.com/fav757/' target='_blank'>
+        aplication or spends manager. My code is available on{' '}
+        <a
+          href='https://github.com/fav757/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           Github
-        </a>.
+        </a>
+        .
       </p>
     </AboutPageStyled>
   );

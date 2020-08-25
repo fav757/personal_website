@@ -6,7 +6,7 @@ const FormStyled = styled.form`
     padding: 0.5rem 4rem;
     color: inherit;
     background: ${(props) =>
-      props.theme.mode === 'dark' ? '#12111f' : '#9e9e9e'};
+      props.theme.mode === 'dark' ? '#12111f' : '#dddddd'};
     border: none;
     border-radius: 1rem;
   }

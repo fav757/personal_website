@@ -41,15 +41,27 @@ function SocialsLinks() {
   return (
     <SocialsLinksStyled>
       <div>
-        <SocialsLink href='https://github.com/fav757/'>
+        <SocialsLink
+          href='https://github.com/fav757/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <i className='fab fa-github-alt'></i>
           <span>Github</span>
         </SocialsLink>
-        <SocialsLink href='https://www.linkedin.com/in/oleksandrsapalsky/'>
+        <SocialsLink
+          href='https://www.linkedin.com/in/oleksandrsapalsky/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <i className='fab fa-linkedin-in'></i>
           <span>Linkedin</span>
         </SocialsLink>
-        <SocialsLink href='https://t.me/sapalsky'>
+        <SocialsLink
+          href='https://t.me/sapalsky'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <i className='fab fa-telegram-plane'></i>
           <span>Telegram</span>
         </SocialsLink>
@@ -75,7 +87,7 @@ function ContactsPage() {
       <h2>Cocial networks</h2>
       <SocialsLinks />
       <h2>Contact me</h2>
-      <p>You can also contact me using the contact form.</p>
+      <p>Adblcok can block form submission. Please <b>turn it off</b></p>
       <ContactForm />
     </ContactsPageStyled>
   );
