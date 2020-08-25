@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import PageContainer from './PageContainer';
 
 const ContentSideStyled = styled.div`
-  padding: 1rem 0;
+  padding-bottom: 2rem;
   flex: 1;
   height: 100%;
 
