@@ -11,7 +11,7 @@ const HeaderStyled = styled.header`
   border-bottom: ${(props) =>
     props.theme.mode === 'dark' ? '1px solid white' : '1px solid black'};
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 768px) {
     position: sticky;
     top: 0;
     background: ${(props) =>
