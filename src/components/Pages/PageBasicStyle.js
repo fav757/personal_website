@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const PageBasicStyle = styled.div`
+  margin-bottom: 1rem;
+
   & a {
     color: inherit;
   }
-  
+
   /* React transition animations */
   &.pageContainerAnimation-enter {
     transform: scale(0);

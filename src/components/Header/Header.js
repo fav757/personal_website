@@ -13,6 +13,7 @@ const HeaderStyled = styled.header`
 
   @media only screen and (max-width: 768px) {
     position: sticky;
+    z-index: 998;
     top: 0;
     background: ${(props) =>
       props.theme.mode === 'dark'

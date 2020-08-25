@@ -10,6 +10,7 @@ const ContentSideStyled = styled.div`
 
   @media only screen and (max-width: 768px) {
     height: auto;
+    padding-bottom: 0;
   }
 `;
 
