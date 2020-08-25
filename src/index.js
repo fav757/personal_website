@@ -4,6 +4,7 @@ import 'normalize.css';
 import App from './App';
 import { GlobalContext } from './GlobalState';
 import { HashRouter } from 'react-router-dom';
+import './i18n';
 
 ReactDOM.render(
   <GlobalContext>
