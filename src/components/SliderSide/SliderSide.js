@@ -21,7 +21,7 @@ const SliderSideStyled = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    height: 50vh;
+    height: calc(100vh - 67px);
   }
 `;
 

@@ -91,7 +91,7 @@ function ContactsPage() {
       <h2>Cocial networks</h2>
       <SocialsLinks />
       <h2>Contact me</h2>
-      <p>Adblcok can block form submission. Please <b>turn it off</b></p>
+      <p>Adblock can block form submission. Please <b>turn it off</b></p>
       <ContactForm />
     </ContactsPageStyled>
   );
