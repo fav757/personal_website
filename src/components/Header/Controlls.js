@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { GlobalState } from '../../GlobalState';
 import { changeTheme, changeLanguage } from '../../rootActions';
+import i18n from '../../i18n';
 
 const ControllsStyled = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ function Controlls() {
   const setLang = () => {
     dispatch(changeLanguage);
     document.documentElement.lang = state.language;
+    i18n.changeLanguage(state.language);
   };
 
   return (
