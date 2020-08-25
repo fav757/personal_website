@@ -14,27 +14,25 @@ const SocialsLinksStyled = styled.div`
     display: flex;
     flex-flow: column nowrap;
   }
+`;
 
-  & a,
-  & > div > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
+const SocialsLink = styled.a`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
 
-    &:hover {
-      color: ${(props) =>
-        props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff'};
-    }
+  &:hover {
+    color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff')};
   }
 
-  & i {
+  & > i {
     cursor: pointer;
     font-size: 1.4rem;
     margin-right: 1rem;
   }
 
-  & span {
+  & > span {
     text-decoration: underline;
   }
 `;
@@ -43,29 +41,29 @@ function SocialsLinks() {
   return (
     <SocialsLinksStyled>
       <div>
-        <a href='https://github.com/fav757/'>
+        <SocialsLink href='https://github.com/fav757/'>
           <i className='fab fa-github-alt'></i>
           <span>Github</span>
-        </a>
-        <a href='https://www.linkedin.com/in/oleksandrsapalsky/'>
+        </SocialsLink>
+        <SocialsLink href='https://www.linkedin.com/in/oleksandrsapalsky/'>
           <i className='fab fa-linkedin-in'></i>
           <span>Linkedin</span>
-        </a>
-        <a href='https://t.me/sapalsky'>
+        </SocialsLink>
+        <SocialsLink href='https://t.me/sapalsky'>
           <i className='fab fa-telegram-plane'></i>
           <span>Telegram</span>
-        </a>
+        </SocialsLink>
       </div>
 
       <div>
-        <div>
+        <SocialsLink as='div'>
           <i className='fas fa-envelope'></i>
           <span>fav755@gmail.com</span>
-        </div>
-        <div>
+        </SocialsLink>
+        <SocialsLink as='div'>
           <i className='fas fa-phone-square'></i>
           <span>+380 975 290 153</span>
-        </div>
+        </SocialsLink>
       </div>
     </SocialsLinksStyled>
   );
