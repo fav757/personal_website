@@ -28,7 +28,7 @@ const ProgressThumb = styled.div`
   float: left;
   width: 0.35rem;
   height: 0.35rem;
-  margin-left: -0.35rem;
+  margin-left: -0.5rem;
   transform: scale(2);
   background: ${props => props.theme.mode === 'dark' ? '#bfb9fb' : 'gray'};
   border-radius: 50%;
