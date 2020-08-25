@@ -60,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 768px) {
     body {
       display: block;
       padding: 0;

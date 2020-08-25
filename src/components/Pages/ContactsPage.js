@@ -15,7 +15,7 @@ const SocialsLinksStyled = styled.div`
     flex-flow: column nowrap;
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
