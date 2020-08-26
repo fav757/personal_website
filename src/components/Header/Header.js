@@ -12,6 +12,7 @@ const HeaderStyled = styled.header`
     props.theme.mode === 'dark' ? '1px solid white' : '1px solid black'};
 
   @media only screen and (max-width: 768px) {
+    padding: 1rem;
     position: sticky;
     z-index: 998;
     top: 0;
