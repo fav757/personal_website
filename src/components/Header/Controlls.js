@@ -33,7 +33,7 @@ function Controlls() {
   useEffect(() => {
     document.documentElement.lang = state.language;
     i18n.changeLanguage(state.language);
-  });
+  }, [state.language]);
 
   return (
     <ControllsStyled>

@@ -1,8 +1,14 @@
 {
   "en": {
     "translation": {
+      "header go back": "Go back",
       "header theme": "Change theme",
       "header language": "Change language",
+      "header home": "Home",
+      "header about": "About",
+      "header skills": "Skills",
+      "header contacts": "Contacts",
+      "header error404": "Not found",
 
       "homePage header": "Alexandr Sapalsky",
       "homePage subheader": "Trainee Front-end developer",
@@ -33,8 +39,14 @@
 
   "ru": {
     "translation": {
+      "header go back": "Вернуться назад",
       "header theme": "Сменить тему",
       "header language": "Сменить язык",
+      "header home": "Главная",
+      "header about": "Обо мне",
+      "header skills": "Навыки",
+      "header contacts": "Контакты",
+      "header error404": "Не найденно",
 
       "homePage header": "Александр Сапальский",
       "homePage subheader": "Трэйни Фронт-энд разработчик",

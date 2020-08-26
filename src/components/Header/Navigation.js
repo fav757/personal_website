@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useHistory, Link, Switch, Route } from 'react-router-dom';
-
-const routes = ['home', 'about', 'skills', 'contacts'];
+import { useTranslation } from 'react-i18next';
 
 const NavigationStyled = styled.nav`
   display: flex;
@@ -19,7 +18,6 @@ const NavigationStyled = styled.nav`
 
   & h2 {
     margin: 0 0 0 1rem;
-    text-transform: capitalize;
 
     &:hover {
       color: ${(props) =>
@@ -70,32 +68,39 @@ const NavigationStyled = styled.nav`
 `;
 
 function Navigation() {
+  const { t } = useTranslation();
   const history = useHistory();
   const handleClick = () => history.goBack();
 
   return (
     <NavigationStyled>
-      <i onClick={handleClick} className='fas fa-arrow-left'></i>
+      <i title={t('header go back')} onClick={handleClick} className='fas fa-arrow-left'></i>
       <div>
         <h2>
           <Switch>
-            {routes.map((route) => (
-              <Route key={route} path={'/' + route}>
-                {route}
-              </Route>
-            ))}
+            <Route path='/home'>{t('header home')}</Route>
+            <Route path='/about'>{t('header about')}</Route>
+            <Route path='/skills'>{t('header skills')}</Route>
+            <Route path='/contacts'>{t('header contacts')}</Route>
             <Route exact path='/'>
-              Home
+              {t('header home')}
             </Route>
-            <Route>Error</Route>
+            <Route>{t('header error404')}</Route>
           </Switch>
         </h2>
         <ul>
-          {routes.map((route) => (
-            <li key={route}>
-              <Link to={'/' + route}>{route}</Link>
-            </li>
-          ))}
+          <li>
+            <Link to='/home'>{t('header home')}</Link>
+          </li>
+          <li>
+            <Link to='/about'>{t('header about')}</Link>
+          </li>
+          <li>
+            <Link to='/skills'>{t('header skills')}</Link>
+          </li>
+          <li>
+            <Link to='/contacts'>{t('header contacts')}</Link>
+          </li>
         </ul>
       </div>
     </NavigationStyled>
