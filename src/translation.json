@@ -33,7 +33,14 @@
       "contactsForm message": "Your message",
       "contactsForm button": "Send",
       "contactsForm response ok": "Success",
-      "contactsForm response fail": "Error. Please reload page and try again."
+      "contactsForm response fail": "Error. Please reload page and try again.",
+
+      "aboutPage main header": "Main",
+      "aboutPage main": "I am a 22 year beginner web developer from Kharkiv who is interested in web technologies and right now I want to start my Front-end career, work on real projects, improving my skills in practice.",
+      "aboutPage education header": "Education",
+      "aboutPage education": "I study at Kharkiv polytechnical institute at the Faculty of Engineering and Physics, specialty \"Computer Science\". In 2019 I received a bachelor's degree. At this moment I am continuing my education in the sixth year to get a master's degree.",
+      "aboutPage experience header": "Experience",
+      "aboutPage experience": "I did my own study of Front-end basics using resources like MDN and learn.javascript.ru. Also was trained in Epam courses in the \"Front-end / JavaScript\" direction. Made several little projects like notes aplication or spends manager. My code is available on "
     }
   },
 
@@ -71,7 +78,14 @@
       "contactsForm message": "Ваше сообщение",
       "contactsForm button": "Отправить",
       "contactsForm response ok": "Успех",
-      "contactsForm response fail": "Ошибка. Пожалуйта, перезагрузите страницу и попробуйте ещё раз."
+      "contactsForm response fail": "Ошибка. Пожалуйта, перезагрузите страницу и попробуйте ещё раз.",
+
+      "aboutPage main header": "Основное",
+      "aboutPage main": "Я 22 летний начинающий веб-разработчик из Харькова, которому интересны веб-технологии, и прямо сейчас я хочу начать свою фронт-энд карьеру, работать на реальными проектами, улучшая свои умения на практике.",
+      "aboutPage education header": "Образование",
+      "aboutPage education": "Я учусь в ХПИ на Инженерно-техническом-факультете по специальности \"Компьютерные науки\". В 2019 году получил статус бакалавра. В данный момент продолжаю обучение на шестом курсе, чтобы получить статус магистра",
+      "aboutPage experience header": "Опыт",
+      "aboutPage experience": "Изучал фронт-энд самостоятельно, используя ресурсы вроде MDN и learn.javascript.ru. Также проходил курсы Epam по направлению \"Front-end / JavaScript\". Сделал несколько небольших проектов вроде менеджера расходов и приложения для заметок. Мой код доступен на "
     }
   }
 }
