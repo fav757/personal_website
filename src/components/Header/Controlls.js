@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { GlobalState } from '../../GlobalState';
 import { changeTheme, changeLanguage } from '../../rootActions';
 import i18n from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const ControllsStyled = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const ControllsStyled = styled.div`
 
 function Controlls() {
   const { state, dispatch } = useContext(GlobalState);
+  const { t } = useTranslation();
 
   const setTheme = () => dispatch(changeTheme);
   const setLang = () => dispatch(changeLanguage);
@@ -35,8 +37,16 @@ function Controlls() {
 
   return (
     <ControllsStyled>
-      <i onClick={setTheme} className='fas fa-lightbulb'></i>
-      <i onClick={setLang} className='fas fa-globe'></i>
+      <i
+        title={t('header theme')}
+        onClick={setTheme}
+        className='fas fa-lightbulb'
+      ></i>
+      <i
+        title={t('header language')}
+        onClick={setLang}
+        className='fas fa-globe'
+      ></i>
     </ControllsStyled>
   );
 }

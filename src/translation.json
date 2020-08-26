@@ -1,6 +1,9 @@
 {
   "en": {
     "translation": {
+      "header theme": "Change theme",
+      "header language": "Change language",
+
       "homePage header": "Alexandr Sapalsky",
       "homePage subheader": "Trainee Front-end developer",
 
@@ -30,6 +33,9 @@
 
   "ru": {
     "translation": {
+      "header theme": "Сменить тему",
+      "header language": "Сменить язык",
+
       "homePage header": "Александр Сапальский",
       "homePage subheader": "Трэйни Фронт-энд разработчик",
 
