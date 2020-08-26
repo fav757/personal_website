@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const FormStyled = styled.form`
   & button {
@@ -36,6 +37,7 @@ const FormStyled = styled.form`
 `;
 
 function ContactForm() {
+  const { t } = useTranslation();
   const [responseStatus, setResponseStatus] = useState('waiting');
   const formData = { accessKey: '0e0cfb67-b5bb-4d8a-acfb-a53a4a963f34' };
 
@@ -68,35 +70,35 @@ function ContactForm() {
       <input
         onChange={handleChange}
         name='name'
-        placeholder='contactsPage form name'
+        placeholder={t('contactsForm name')}
         required
       />
       <input
         onChange={handleChange}
         name='email'
         type='email'
-        placeholder='contactsPage form email'
+        placeholder={t('contactsForm email')}
         required
       />
       <textarea
         onChange={handleChange}
         name='message'
         style={{ resize: 'none' }}
-        placeholder='contactsPage form message'
+        placeholder={t('contactsForm message')}
         rows='10'
         required
       />
       {responseStatus === 'waiting' ? (
         <div>
-          <button name='sendButton'>Send</button>
+          <button name='sendButton'>{t('contactsForm button')}</button>
         </div>
       ) : (
         <div>
           <i className={responseStatus ? 'fas fa-check' : 'fas fa-times'}></i>
           <span>
             {responseStatus
-              ? 'contactsPage form response ok'
-              : 'contactsPage form response fail'}
+              ? t('contactsForm response ok')
+              : t('contactsForm response fail')}
           </span>
         </div>
       )}

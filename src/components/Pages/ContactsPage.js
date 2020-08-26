@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import basicPageStyle from './PageBasicStyle';
 import ContactForm from '../ContactForm/ContactForm';
+import { useTranslation } from 'react-i18next';
 
 const ContactsPageStyled = styled(basicPageStyle)``;
 
@@ -85,12 +86,14 @@ function SocialsLinks() {
 }
 
 function ContactsPage() {
+  const { t } = useTranslation();
+
   return (
     <ContactsPageStyled>
-      <h2>Cocial networks</h2>
+      <h2>{t('contactsPage cocial')}</h2>
       <SocialsLinks />
-      <h2>Contact me</h2>
-      <p>Adblock can block form submission. Please <b>turn it off</b>.</p>
+      <h2>{t('contactsPage contact')}</h2>
+      <p>{t('contactsPage adblock')}<b>{t('contactsPage turn off')}</b></p>
       <ContactForm />
     </ContactsPageStyled>
   );

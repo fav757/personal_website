@@ -12,7 +12,19 @@
       "skillsPage russian": "Russian",
       "skillsPage ukrainian": "Ukrainian",
       "skillsPage english": "English",
-      "skillsPage native": "Native speaker"
+      "skillsPage native": "Native speaker",
+
+      "contactsPage cocial": "Cocial networks",
+      "contactsPage contact": "Contact me",
+      "contactsPage adblock": "Adblock can block form submission. Please ",
+      "contactsPage turn off": "turn it off.",
+
+      "contactsForm name": "Your name",
+      "contactsForm email": "Your email",
+      "contactsForm message": "Your message",
+      "contactsForm button": "Send",
+      "contactsForm response ok": "Success",
+      "contactsForm response fail": "Error. Please reload page and try again."
     }
   },
 
@@ -29,7 +41,19 @@
       "skillsPage russian": "Русский",
       "skillsPage ukrainian": "Украинский",
       "skillsPage english": "Английский",
-      "skillsPage native": "Родной язык"
+      "skillsPage native": "Родной язык",
+
+      "contactsPage cocial": "Социальные сети",
+      "contactsPage contact": "Связаться со мной",
+      "contactsPage adblock": "Adblock может блокировать отправку формы. Пожалуйста, ",
+      "contactsPage turn off": "выключите его.",
+
+      "contactsForm name": "Ваше имя",
+      "contactsForm email": "Ваш email",
+      "contactsForm message": "Ваше сообщение",
+      "contactsForm button": "Отправить",
+      "contactsForm response ok": "Успех",
+      "contactsForm response fail": "Ошибка. Пожалуйта, перезагрузите страницу и попробуйте ещё раз."
     }
   }
 }
