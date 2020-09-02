@@ -14,7 +14,7 @@ const PageContainerStyled = styled.div`
   display: grid;
   align-items: center;
   overflow: auto;
-  scrollbar-color: rgba(0, 0, 0, 0.3) #2d2c3e;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -22,12 +22,11 @@ const PageContainerStyled = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #2d2c3e;
-    outline: 1px solid slategrey;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   @media only screen and (max-width: 768px) {
