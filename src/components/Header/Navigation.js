@@ -7,6 +7,11 @@ const NavigationStyled = styled.nav`
   display: flex;
   align-items: center;
 
+  &:hover ul {
+    visibility: visible;
+    opacity: 1;
+  }
+
   & > i {
     cursor: pointer;
   }
@@ -37,12 +42,10 @@ const NavigationStyled = styled.nav`
     }
   }
 
-  &:hover ul {
-    display: block;
-  }
-
   & ul {
-    display: none;
+    opacity: 0;
+    transition: 0.25s linear;
+    visibility: hidden;
     list-style: none;
     padding: 0;
     margin: 0 0 0 -0.89rem;
