@@ -4,7 +4,7 @@ import translation from './translation.json';
 
 i18n.use(initReactI18next).init({
   resources: translation,
-  lng: 'en',
+  lng: localStorage.getItem('language') || 'en',
   fallbackLng: 'en',
   interpolation: {
     escapeValue: false,

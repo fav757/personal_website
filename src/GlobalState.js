@@ -2,8 +2,8 @@ import React, { createContext, useReducer } from 'react';
 import rootReducer from './rootReducer';
 
 const initialState = {
-  theme: 'dark',
-  language: 'en',
+  theme: localStorage.getItem('theme') || 'dark',
+  language: localStorage.getItem('language') ||  'en',
 };
 
 export const GlobalState = createContext(initialState);
