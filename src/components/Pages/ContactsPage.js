@@ -27,6 +27,10 @@ const SocialsLink = styled.a`
   margin-bottom: 1rem;
   text-decoration: none;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &:hover {
     color: ${(props) => (props.theme.mode === 'dark' ? '#bfb9fb' : '#4fa7ff')};
   }

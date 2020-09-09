@@ -43,6 +43,7 @@ const NavigationStyled = styled.nav`
   }
 
   & ul {
+    z-index: 998;
     opacity: 0;
     transition: 0.25s linear;
     visibility: hidden;
